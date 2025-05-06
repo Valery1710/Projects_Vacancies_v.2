@@ -12,12 +12,17 @@ const getFormattedText = (input) => {
   return input; // Возвращаем текст без изменений
 }
 
-const VacancyCard = ({ id,title, tasks, field, country }) => (
+const VacancyCard = ({ id,title, tasks, field, country, usedInProjectsId }) => {
+  console.log('usedInProjectsId',usedInProjectsId)
+  const usedInProject = db.projects.filter((pr)=> usedInProjectsId.includes(pr.id))
+const usedInProjectName = usedInProject[0].name
+  return(
+
   <div className={styles.projectCard} onClick={() => db.addVacancySelectedId(id)}>
   {/* <div className={styles.projectCard} onClick={() => projectSelected.addItem(id)}> */}
     <Link to="/vacancydetails" >
     <h3>Name: {title}</h3>
-    
+    <p>for project - <b>{usedInProjectName}</b></p>
     <p>Id: {id}</p>
     <p>Field: {field}</p>
     <p>Country: {country}</p>
@@ -25,7 +30,7 @@ const VacancyCard = ({ id,title, tasks, field, country }) => (
     
     </Link>
   </div>
-);
+)};
 
 
 export default VacancyCard

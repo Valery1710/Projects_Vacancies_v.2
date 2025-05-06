@@ -51,22 +51,22 @@ updateProject(project) {
 }
 
   addVacancy(vacancy) {
-  
+  //initialization of the list of vacancies
     this.vacancies = JSON.parse(localStorage.getItem('vacanciesStore')) ? JSON.parse(localStorage.getItem('vacanciesStore')) : [];
 
-    if (this.vacancies.some((el) => el.id === vacancy.id)) //проверка уникальности id вакансии
+    if (this.vacancies.some((el) => el.id === vacancy.id)) //checking the uniqueness of a vacancy
       {
         console.log("Vacancy with this id already exists!")
       }else{
-        // создание новой вакансии
-        console.log('создание новой вакансии')
-      const newVacancy = { id: Date.now(), ...vacancy};
+        // create new vacancy
+      const usedInProjects = this.projectSelectedId ? [this.projectSelectedId] : [];
+      const newVacancy = { id: Date.now(), projects:usedInProjects, ...vacancy};
       this.vacancies.push(newVacancy);
       localStorage.setItem('vacanciesStore', JSON.stringify(this.vacancies));
  
       console.log('newVacancy',newVacancy)
       // если выбран конкретный проект => добавление id вакансии в список вакансий проекта
-      console.log('projectSelectedId',this.projectSelectedId)
+     
       if (this.projectSelectedId) {
         // получение массива с выбранным проектом
         console.log('projectSelectedId',this.projectSelectedId)

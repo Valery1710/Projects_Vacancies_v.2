@@ -54,6 +54,7 @@ const ListVacancies = () => {
               id={vacancy.id}
               field={vacancy.field}
               country={vacancy.country}
+              usedInProjectsId={vacancy.projects ? vacancy.projects :[]}
               
               tasks={vacancy.description || ['Sample task 1', 'Sample task 2']}
             />

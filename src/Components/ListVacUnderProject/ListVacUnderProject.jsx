@@ -41,18 +41,18 @@ const vacanciesInProject = db.vacancies.filter((vacancy)=>projectForDisplay[0].v
   return (
     <>
 
-      {vacanciesInProject.map((project, index) => (
+      {vacanciesInProject.map((vacancy, index) => (
       // {db.vacancies.map((project, index) => (
         <div className={styles.container}>
  
           <VacUnderPr
-            key={project.id}
-            name={project.name}
-            id={project.id}
-            field={project.field}
-            country={project.country}
+            key={vacancy.id}
+            name={vacancy.name}
+            id={vacancy.id}
+            field={vacancy.field}
+            country={vacancy.country}
             description={
-              project.description || ['Sample task 1', 'Sample task 2']
+              vacancy.description || ['Sample task 1', 'Sample task 2']
             }
           />
         </div>

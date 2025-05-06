@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  flex-direction: column; /* Вертикальное расположение элементов */
+  align-items: center; /* Центрирование по горизонтали */
+}
+
+.title-id {
+  display: flex; /* Горизонтальное расположение title и id */
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+}
+
+.field-b {
+  margin-top: 10px; /* Отступ сверху для разделения с предыдущими элементами */
+}

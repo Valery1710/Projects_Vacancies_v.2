@@ -1,0 +1,13 @@
+.image_container {
+  width: 1360px;
+  height: 42px;
+  margin-left: 40px;
+
+  /* text-align: center; Центрирование изображения */
+  /* margin: 20px; Отступы вокруг контейнера */
+}
+
+img {
+  max-width: 100%; /* Ограничение ширины изображения */
+  height: auto; /* Автоматическая высота для сохранения пропорций */
+}

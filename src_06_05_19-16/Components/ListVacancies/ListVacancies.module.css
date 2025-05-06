@@ -1,0 +1,55 @@
+.container {
+  width: 1400px;
+  display: flex;
+  height: 100vh;
+  border: 1px solid saddlebrown;
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+
+
+
+
+
+.mainContent {
+  flex: 1;
+  padding: 30px;
+  border: 1px solid brown;
+  background-color: #f1f2f4;
+  border-top-left-radius: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.createBtn {
+  width: 186px;
+  height: 47px;
+  border-radius: 24px;
+  padding: 10px 20px;
+  background-color: #ddd;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 500px;
+  color: #000;
+  cursor: pointer;
+  background-color: #d1d2d6;
+}
+
+.sectionTitle {
+  margin-top: 40px;
+}
+
+.projectList {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+

@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  width: 1400px;
+  height: 100vh;
   background-color: #f4f5f7;
 }
 
@@ -9,6 +9,11 @@
   background: #fff;
   padding: 20px;
   border-right: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .nav button {
@@ -32,7 +37,6 @@
 .mainContent {
   flex: 1;
   padding: 30px;
-  border: 1px solid blue;
 }
 
 .header {

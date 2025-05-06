@@ -1,0 +1,31 @@
+/* Tooltip.module.css */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden; /* Изначально скрыто */
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+
+  /* Позиционирование */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Показать над элементом */
+  left: 50%;
+  margin-left: -60px; /* Центрирование */
+
+  opacity: 0; /* Начальная прозрачность */
+  transition: opacity 0.3s; /* Плавный переход */
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible; /* Показываем подсказку при наведении */
+  opacity: 1; /* Делаем видимой */
+}

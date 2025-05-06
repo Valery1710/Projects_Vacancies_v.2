@@ -1,0 +1,12 @@
+.projectCard {
+  width: 45%;
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.projectCard h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+}

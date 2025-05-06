@@ -14,12 +14,12 @@ const VacUnderPr = ({ name, field, country, description }) => {
   return (
     
     <div className={styles.myComponent}>
-      {/* <Link to="/vacancydetails" className={styles.myComponent}> */}
+      <Link to="/vacancydetails" className={styles.myComponent}>
       <span className={`${styles.item} ${styles.name}`}>Vacancion - {name}</span>
       <span className={styles.item}>Field - {field}</span>
       <span className={styles.item}>Country - {country}</span>
       <span className={`${styles.item} ${styles.description}`}>description - {description}</span>
-      {/* </Link> */}
+      </Link>
     </div>
     
   );

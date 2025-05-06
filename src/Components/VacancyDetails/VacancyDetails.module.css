@@ -33,6 +33,9 @@
   .main {
     flex: 1;
     padding: 40px;
+    background-color: #f1f3f6;
+    border-radius: 14px;
+
   }
   
   .header {

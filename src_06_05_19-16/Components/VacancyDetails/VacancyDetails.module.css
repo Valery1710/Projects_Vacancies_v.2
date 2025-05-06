@@ -1,13 +1,6 @@
-* {
-  text-decoration: none;
-  color: black;
-}
-
 .container {
-  width: 1400px;
     display: flex;
     font-family: sans-serif;
-  
   }
   
   .sidebar {
@@ -40,9 +33,6 @@
   .main {
     flex: 1;
     padding: 40px;
-    
-    background-color: #f3f4f6;
-    border-top-left-radius: 24px;
   }
   
   .header {
@@ -117,8 +107,3 @@
     font-weight: bold;
     cursor: pointer;
   }
-
-  
-.message {
-  margin-left: 300px;
-}

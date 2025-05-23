@@ -7,31 +7,25 @@ import projectSelected from '../../store/ProjectSelected';
 import db from '../../store/Db';
 
 const VacancytDetails = ({id}) => {
-  // const [field, setField] = useState(projectsStore.id);
-  // const [experience, setExperience] = useState('More 2 years');
-  // const [deadline, setDeadline] = useState('2024-11-22');
-  // const [description, setDescription] = useState(
-  //   "We are looking for a creative and detail-oriented designer to develop eye-catching and engaging visual materials for our social media platforms. The goal is to create content that aligns with our brand identity and effectively captures our audience's attention."
-  // );
+console.log('vacancySelectedId',db.vacancySelectedId)
   const vacancyForDisplay = db.vacancies.filter(el=>el.id === db.vacancySelectedId)
+  console.log('vacancyForDisplay',vacancyForDisplay)
   // Внимание в projectForDisplay - Array с одним элементом - объектом с данными выбранного проекта
     const [formData, setFormData] = useState(vacancyForDisplay[0]);
     console.log('formData',formData)
-
-
-
-
-
+    const project = db.projects.filter((pr)=>pr.vacancies.includes(db.vacancySelectedId))
+    console.log('project',project)
+    const projectName = project[0].name
 
   console.log('vacancyForDisplay',vacancyForDisplay)
-  const handleAddVacancy = () => {
-    console.log('Вакансия добавлена!');
-  };
+  // const handleAddVacancy = () => {
+  //   console.log('Вакансия добавлена!');
+  // };
 
-  const handleDeleteProject = () => {
-    console.log('Проект удалён!');
-    projectsStore.removeItem(projectSelected.item)
-  };
+  // const handleDeleteProject = () => {
+  //   console.log('Проект удалён!');
+  //   projectsStore.removeItem(projectSelected.item)
+  // };
   const handleCloseVacation = () => {
     console.log('Вакансия закрыта!');
     console.log('db.vacancySelectedId',db.vacancySelectedId)
@@ -66,7 +60,8 @@ const VacancytDetails = ({id}) => {
 
       <main className={styles.main}>
         <div className={styles.header}>
-          <h1>{formData.name}</h1>
+          <h1>Vacancy - {formData.name}</h1>
+          <h2>for project - {projectName}</h2>
          
           <button className={styles.deleteBtn} onClick={handleCloseVacation}>
           <Link to='/listvacancies'>  Close vacancy </Link>

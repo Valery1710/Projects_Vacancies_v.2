@@ -21,6 +21,7 @@ import db from '../../store/Db';
 // };
 
 const ListVacancies = () => {
+   db.projectSelectedId = null
   // const [projects, setProjects] = useState([projectsStore.items]);
 
   // projects.map((el) => {

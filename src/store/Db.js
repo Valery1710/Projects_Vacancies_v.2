@@ -114,6 +114,7 @@ updateProject(project) {
       console.log('id',id)
       this.vacancySelectedId = id;
       localStorage.setItem('vacancySelectedId', JSON.stringify(this.vacancySelectedId)|| null);
+     
       
     }
   

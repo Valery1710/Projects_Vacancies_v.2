@@ -15,7 +15,7 @@ const getFormattedText = (input) => {
 const VacancyCard = ({ id,title, tasks, field, country, usedInProjectsId }) => {
   console.log('usedInProjectsId',usedInProjectsId)
   const usedInProject = db.projects.filter((pr)=> usedInProjectsId.includes(pr.id))
-const usedInProjectName = usedInProject[0].name
+const usedInProjectName = usedInProject.length > 0? usedInProject[0].name : null
   return(
 
   <div className={styles.projectCard} onClick={() => db.addVacancySelectedId(id)}>
